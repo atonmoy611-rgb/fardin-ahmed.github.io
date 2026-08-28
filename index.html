@@ -1,796 +1,721 @@
-```html
+```html id="f2m8qa"
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fardin Ahmed Tonmoy | News Research & Creative Media</title>
-
-    <meta name="description"
-        content="Fardin Ahmed Tonmoy - News Research Specialist, Media Researcher and Video Editor specializing in digital media, visual storytelling and cinematic editing.">
-
-    <meta name="keywords"
-        content="Fardin Ahmed Tonmoy, Fardin Ahmed, News Research Specialist, Media Researcher, Video Editor, Cinematic Video Editing, Visual Storytelling, Digital Media">
-
-    <meta name="author" content="Fardin Ahmed Tonmoy">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: #08080b;
-            color: white;
-        }
-
-        /* NAVBAR */
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.72);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-        }
-
-        nav .logo {
-            font-size: 23px;
-            font-weight: bold;
-            color: #ff1e2d;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff1e2d;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 100vh;
-
-            background:
-                linear-gradient(
-                    rgba(0, 0, 0, 0.45),
-                    rgba(0, 0, 0, 0.88)
-                ),
-                url('Background.jfif');
-
-            background-size: cover;
-            background-position: center;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-            padding: 100px 20px 50px;
-        }
-
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .profile-img {
-            width: 175px;
-            height: 175px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #ff1e2d;
-            box-shadow: 0 0 35px rgba(255, 30, 45, 0.55);
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #ff1e2d;
-        }
-
-        .hero .tagline {
-            font-size: 21px;
-            color: #ddd;
-            line-height: 1.6;
-            margin-bottom: 28px;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            padding: 13px 28px;
-            background: #ff1e2d;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .hero-btn:hover {
-            background: #d90f1d;
-            transform: translateY(-2px);
-        }
-
-        /* GENERAL */
-
-        section {
-            padding: 85px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 45px;
-        }
-
-        .section-title span {
-            color: #ff1e2d;
-        }
-
-        /* ABOUT */
-
-        .about {
-            background: #111118;
-        }
-
-        .about-box {
-            max-width: 900px;
-            margin: auto;
-            background: #1a1a24;
-            padding: 35px;
-            border-radius: 15px;
-            border: 1px solid #292936;
-        }
-
-        .about-box p {
-            color: #ccc;
-            line-height: 1.9;
-            font-size: 17px;
-        }
-
-        /* EXPERIENCE */
-
-        .experience-card {
-            max-width: 900px;
-            margin: auto;
-            background: #15151d;
-            padding: 32px;
-            border-left: 4px solid #ff1e2d;
-            border-radius: 10px;
-        }
-
-        .experience-card h3 {
-            color: #ff1e2d;
-            font-size: 25px;
-            margin-bottom: 8px;
-        }
-
-        .experience-card h4 {
-            color: #aaa;
-            margin-bottom: 18px;
-        }
-
-        .experience-card p {
-            color: #ccc;
-            line-height: 1.8;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            background: #111118;
-        }
-
-        .skill-container {
-            max-width: 1000px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(210px, 1fr));
-
-            gap: 18px;
-        }
-
-        .skill {
-            background: #1a1a24;
-            padding: 28px 20px;
-            text-align: center;
-            border-radius: 10px;
-            border: 1px solid #292936;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-6px);
-            border-color: #ff1e2d;
-        }
-
-        .skill h3 {
-            color: #ff1e2d;
-            margin-bottom: 10px;
-        }
-
-        .skill p {
-            color: #bbb;
-            line-height: 1.5;
-        }
-
-        /* CREATIVE */
-
-        .creative {
-            background: #0d0d12;
-        }
-
-        .creative-grid {
-            max-width: 1000px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns:
-                repeat(auto-fit, minmax(220px, 1fr));
-
-            gap: 20px;
-        }
-
-        .creative-card {
-            background: #181820;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 12px;
-            border: 1px solid #292936;
-        }
-
-        .creative-card .icon {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
-
-        .creative-card h3 {
-            color: #ff1e2d;
-            margin-bottom: 10px;
-        }
-
-        .creative-card p {
-            color: #bbb;
-            line-height: 1.6;
-        }
-
-        /* EDUCATION */
-
-        .education {
-            background: #111118;
-        }
-
-        .education-card {
-            max-width: 900px;
-            margin: auto;
-            background: #1a1a24;
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .education-card h3 {
-            color: #ff1e2d;
-            margin-bottom: 12px;
-        }
-
-        .education-card p {
-            color: #ccc;
-            line-height: 1.7;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact p {
-            color: #ccc;
-            margin-bottom: 28px;
-            font-size: 17px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .social-links a {
-            padding: 13px 23px;
-            background: #ff1e2d;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #d90f1d;
-            transform: translateY(-2px);
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #050507;
-            color: #777;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 700px) {
-
-            nav {
-                padding: 15px 5%;
-            }
-
-            nav .logo {
-                font-size: 18px;
-            }
-
-            nav ul {
-                gap: 9px;
-            }
-
-            nav ul li a {
-                font-size: 11px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero .tagline {
-                font-size: 17px;
-            }
-
-            .profile-img {
-                width: 145px;
-                height: 145px;
-            }
-
-            section {
-                padding: 65px 5%;
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fardin Ahmed Tonmoy | News Research & Creative Media</title>
+
+<meta name="description" content="Fardin Ahmed Tonmoy - News Research Specialist, Media Researcher, Video Editor and Visual Storyteller.">
+
+<meta name="keywords" content="Fardin Ahmed Tonmoy, Fardin Ahmed, News Research Specialist, Media Researcher, Video Editor, Cinematic Video Editing">
+
+<meta name="author" content="Fardin Ahmed Tonmoy">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08080b;
+    color:white;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+    color:#ff1e2d;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav ul li a:hover{
+    color:#ff1e2d;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.88)),
+    url('Background.jfif');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:100px 20px 50px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.profile-img{
+    width:175px;
+    height:175px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #ff1e2d;
+    box-shadow:0 0 35px rgba(255,30,45,.55);
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#ff1e2d;
+}
+
+.tagline{
+    font-size:21px;
+    color:#ddd;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:13px 28px;
+    background:#ff1e2d;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* GENERAL */
+
+section{
+    padding:85px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#ff1e2d;
+}
+
+/* ABOUT */
+
+.about{
+    background:#111118;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    background:#1a1a24;
+    padding:35px;
+    border-radius:15px;
+    border:1px solid #292936;
+}
+
+.about-box p{
+    color:#ccc;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* EXPERIENCE */
+
+.experience-card{
+    max-width:900px;
+    margin:auto;
+    background:#15151d;
+    padding:32px;
+    border-left:4px solid #ff1e2d;
+    border-radius:10px;
+}
+
+.experience-card h3{
+    color:#ff1e2d;
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.experience-card h4{
+    color:#aaa;
+    margin-bottom:18px;
+}
+
+.experience-card p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* SKILLS */
+
+.skills{
+    background:#111118;
+}
+
+.skill-container{
+    max-width:1000px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+
+    gap:18px;
+}
+
+.skill{
+    background:#1a1a24;
+    padding:28px 20px;
+    text-align:center;
+    border-radius:10px;
+    border:1px solid #292936;
+}
+
+.skill h3{
+    color:#ff1e2d;
+    margin-bottom:10px;
+}
+
+.skill p{
+    color:#bbb;
+    line-height:1.5;
+}
+
+/* CREATIVE */
+
+.creative{
+    background:#0d0d12;
+}
+
+.creative-grid{
+    max-width:1000px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.creative-card{
+    background:#181820;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:12px;
+    border:1px solid #292936;
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.creative-card h3{
+    color:#ff1e2d;
+    margin-bottom:10px;
+}
+
+.creative-card p{
+    color:#bbb;
+    line-height:1.6;
+}
+
+/* EDUCATION */
+
+.education{
+    background:#111118;
+}
+
+.education-card{
+    max-width:900px;
+    margin:auto;
+    background:#1a1a24;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.education-card h3{
+    color:#ff1e2d;
+    margin-bottom:12px;
+}
+
+.education-card p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#ccc;
+    margin-bottom:28px;
+    font-size:17px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.social-links a{
+    padding:13px 23px;
+    background:#ff1e2d;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.social-links a:hover{
+    background:#d90f1d;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#050507;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav ul{
+        gap:9px;
+    }
+
+    nav ul li a{
+        font-size:11px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .tagline{
+        font-size:17px;
+    }
+
+    .profile-img{
+        width:145px;
+        height:145px;
+    }
+
+    section{
+        padding:65px 5%;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 
-    <!-- NAVIGATION -->
+<nav>
 
-    <nav>
+<div class="logo">FAT</div>
 
-        <div class="logo">
-            FAT
-        </div>
+<ul>
 
-        <ul>
+<li><a href="#about">About</a></li>
 
-            <li>
-                <a href="#about">About</a>
-            </li>
+<li><a href="#experience">Experience</a></li>
 
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
+<li><a href="#skills">Skills</a></li>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
+<li><a href="#creative">Creative</a></li>
 
-            <li>
-                <a href="#creative">Creative</a>
-            </li>
+<li><a href="#contact">Contact</a></li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+</ul>
 
-        </ul>
+</nav>
 
-    </nav>
 
+<!-- HERO -->
 
-    <!-- HERO -->
+<section class="hero">
 
-    <section class="hero">
+<div class="hero-content">
 
-        <div class="hero-content">
+<img src="profile.jpg.jpeg"
+alt="Fardin Ahmed Tonmoy"
+class="profile-img">
 
-            <img src="profile.jpg.jpeg"
-                 alt="Fardin Ahmed Tonmoy"
-                 class="profile-img">
+<h1>
+Fardin Ahmed <span>Tonmoy</span>
+</h1>
 
-            <h1>
-                Fardin Ahmed <span>Tonmoy</span>
-            </h1>
+<p class="tagline">
+News Research Specialist |
+Media Researcher |
+Video Editor |
+Visual Storyteller
+</p>
 
-            <p class="tagline">
+<a href="#about" class="hero-btn">
+Explore My Profile
+</a>
 
-                News Research Specialist |
-                Media Researcher |
-                Video Editor |
-                Visual Storyteller
+</div>
 
-            </p>
+</section>
 
-            <a href="#about" class="hero-btn">
-                Explore My Profile
-            </a>
 
-        </div>
+<!-- ABOUT -->
 
-    </section>
+<section class="about" id="about">
 
+<h2 class="section-title">
+About <span>Me</span>
+</h2>
 
-    <!-- ABOUT -->
+<div class="about-box">
 
-    <section class="about" id="about">
+<p>
 
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
+Hello! I am Fardin Ahmed Tonmoy, a media professional
+with an interest in news research, media monitoring,
+digital media and creative visual storytelling.
 
-        <div class="about-box">
+I work with news and information research while also
+developing my skills in video editing, cinematic editing
+and creative content production.
 
-            <p>
+I enjoy discovering stories, researching information
+and transforming ideas into engaging visual content.
 
-                Hello! I am Fardin Ahmed Tonmoy, a media professional
-                with an interest in news research, media monitoring,
-                digital media and creative visual storytelling.
+</p>
 
-                I work with news and information research while also
-                developing my skills in video editing, cinematic
-                editing and creative content production.
+</div>
 
-                I enjoy discovering stories, analyzing information
-                and transforming ideas into engaging visual content.
+</section>
 
-            </p>
 
-        </div>
+<!-- EXPERIENCE -->
 
-    </section>
+<section id="experience">
 
+<h2 class="section-title">
+Professional <span>Experience</span>
+</h2>
 
-    <!-- EXPERIENCE -->
+<div class="experience-card">
 
-    <section id="experience">
+<h3>Junior Executive</h3>
 
-        <h2 class="section-title">
-            Professional <span>Experience</span>
-        </h2>
+<h4>
+Ryans Archives Limited |
+Print & Online Media Department
+</h4>
 
-        <div class="experience-card">
+<p>
 
-            <h3>
-                Junior Executive
-            </h3>
+Working in media research and monitoring with a focus
+on discovering relevant news, tracking media coverage,
+researching information and supporting digital media
+intelligence.
 
-            <h4>
-                Ryans Archives Limited |
-                Print & Online Media Department
-            </h4>
+My professional interests also include news research,
+information analysis and understanding media trends.
 
-            <p>
+</p>
 
-                Working in media research and monitoring with a focus
-                on discovering relevant news, tracking media coverage,
-                researching information and supporting digital media
-                intelligence.
+</div>
 
-                My professional interests also include news research,
-                information analysis and understanding media trends.
+</section>
 
-            </p>
 
-        </div>
+<!-- SKILLS -->
 
-    </section>
+<section class="skills" id="skills">
 
+<h2 class="section-title">
+Professional <span>Skills</span>
+</h2>
 
-    <!-- SKILLS -->
+<div class="skill-container">
 
-    <section class="skills" id="skills">
+<div class="skill">
 
-        <h2 class="section-title">
-            Professional <span>Skills</span>
-        </h2>
+<h3>News Research</h3>
 
-        <div class="skill-container">
+<p>
+Finding, researching and organizing
+relevant news and information.
+</p>
 
-            <div class="skill">
+</div>
 
-                <h3>
-                    News Research
-                </h3>
 
-                <p>
-                    Finding, researching and organizing
-                    relevant news and information.
-                </p>
+<div class="skill">
 
-            </div>
+<h3>Media Research</h3>
 
+<p>
+Media monitoring, coverage tracking
+and information analysis.
+</p>
 
-            <div class="skill">
+</div>
 
-                <h3>
-                    Media Research
-                </h3>
 
-                <p>
-                    Media monitoring, coverage tracking
-                    and information analysis.
-                </p>
+<div class="skill">
 
-            </div>
+<h3>Video Editing</h3>
 
+<p>
+Creative video editing and
+storytelling through visuals.
+</p>
 
-            <div class="skill">
+</div>
 
-                <h3>
-                    Video Editing
-                </h3>
 
-                <p>
-                    Creative video editing and
-                    storytelling through visuals.
-                </p>
+<div class="skill">
 
-            </div>
+<h3>Cinematic Editing</h3>
 
+<p>
+Cinematic style editing,
+pacing and visual presentation.
+</p>
 
-            <div class="skill">
+</div>
 
-                <h3>
-                    Cinematic Editing
-                </h3>
 
-                <p>
-                    Cinematic style editing,
-                    pacing and visual presentation.
-                </p>
+<div class="skill">
 
-            </div>
+<h3>Visual Storytelling</h3>
 
+<p>
+Turning ideas and stories into
+engaging visual experiences.
+</p>
 
-            <div class="skill">
+</div>
 
-                <h3>
-                    Visual Storytelling
-                </h3>
 
-                <p>
-                    Turning ideas and stories into
-                    engaging visual experiences.
-                </p>
+<div class="skill">
 
-            </div>
+<h3>Digital Media</h3>
 
+<p>
+Understanding digital platforms,
+trends and online media.
+</p>
 
-            <div class="skill">
+</div>
 
-                <h3>
-                    Digital Media
-                </h3>
+</div>
 
-                <p>
-                    Understanding digital platforms,
-                    trends and online media.
-                </p>
+</section>
 
-            </div>
 
-        </div>
+<!-- CREATIVE WORK -->
 
-    </section>
+<section class="creative" id="creative">
 
+<h2 class="section-title">
+Creative <span>Work</span>
+</h2>
 
-    <!-- CREATIVE -->
+<div class="creative-grid">
 
-    <section class="creative" id="creative">
+<div class="creative-card">
 
-        <h2 class="section-title">
-            Creative <span>Work</span>
-        </h2>
+<div class="icon">🔎</div>
 
-        <div class="creative-grid">
+<h3>News Research</h3>
 
+<p>
+Researching stories, information
+and current media trends.
+</p>
 
-            <div class="creative-card">
+</div>
 
-                <div class="icon">
-                    🔎
-                </div>
 
-                <h3>
-                    News Research
-                </h3>
+<div class="creative-card">
 
-                <p>
-                    Researching stories, information
-                    and current media trends.
-                </p>
+<div class="icon">🎬</div>
 
-            </div>
+<h3>Video Editing</h3>
 
+<p>
+Editing videos with creative
+transitions, pacing and storytelling.
+</p>
 
-            <div class="creative-card">
+</div>
 
-                <div class="icon">
-                    🎬
-                </div>
 
-                <h3>
-                    Video Editing
-                </h3>
+<div class="creative-card">
 
-                <p>
-                    Editing videos with creative
-                    transitions, pacing and storytelling.
-                </p>
+<div class="icon">🎥</div>
 
-            </div>
+<h3>Cinematic Content</h3>
 
+<p>
+Creating visually engaging
+cinematic-style content.
+</p>
 
-            <div class="creative-card">
+</div>
 
-                <div class="icon">
-                    🎥
-                </div>
 
-                <h3>
-                    Cinematic Content
-                </h3>
+<div class="creative-card">
 
-                <p>
-                    Creating visually engaging
-                    cinematic-style content.
-                </p>
+<div class="icon">✨</div>
 
-            </div>
+<h3>Creative Media</h3>
 
+<p>
+Exploring ideas and transforming
+them into engaging digital content.
+</p>
 
-            <div class="creative-card">
+</div>
 
-                <div class="icon">
-                    ✨
-                </div>
+</div>
 
-                <h3>
-                    Creative Media
-                </h3>
+</section>
 
-                <p>
-                    Exploring ideas and transforming
-                    them into engaging digital content.
-                </p>
 
-            </div>
+<!-- EDUCATION -->
 
-        </div>
+<section class="education">
 
-    </section>
+<h2 class="section-title">
+My <span>Education</span>
+</h2>
 
+<div class="education-card">
 
-    <!-- EDUCATION -->
+<h3>Academic Journey</h3>
 
-    <section class="education">
+<p>
 
-        <h2 class="section-title">
-            My <span>Education</span>
-        </h2>
+Currently continuing my academic journey while
+developing professional experience, creative skills
+and knowledge in media and digital technology.
 
-        <div class="education-card">
+</p>
 
-            <h3>
-                Academic Journey
-            </h3>
+</div>
 
-            <p>
+</section>
 
-                Currently continuing my academic journey while
-                developing professional experience, creative skills
-                and knowledge in media and digital technology.
 
-            </p>
+<!-- CONTACT -->
 
-        </div>
+<section class="contact" id="contact">
 
-    </section>
+<h2 class="section-title">
+Let's <span>Connect</span>
+</h2>
 
+<p>
+Feel free to connect with me through phone,
+email or my social media profiles.
+</p>
 
-    <!-- CONTACT -->
+<div class="social-links">
 
-    <section class="contact" id="contact">
+<a href="mailto:atonmoy611@gmail.com">
+📧 Email
+</a>
 
-        <h2 class="section-title">
-            Let's <span>Connect</span>
-        </h2>
+<a href="tel:01762147744">
+📞 Call Me
+</a>
 
-        <p>
-            Feel free to connect with me through email
-            or my social media profiles.
-        </p>
+<a href="https://www.facebook.com/share/1MvZS3xax3/?mibextid=wwXIfr"
+target="_blank">
+Facebook
+</a>
 
-        <div class="social-links">
+<a href="https://www.instagram.com/itz_tonmoy_11?igsi=dTRwZDI0YmV5eGQ%3D&utm_source=qr"
+target="_blank">
+Instagram
+</a>
 
-            <a href="mailto:atonmoy611@gmail.com">
-                📧 Email
-            </a>
+</div>
 
-            <a href="https://www.facebook.com/share/1MvZS3xax3/?mibextid=wwXIfr"
-               target="_blank">
-                Facebook
-            </a>
+</section>
 
-            <a href="https://www.instagram.com/itz_tonmoy_11?igsi=dTRwZDI0YmV5eGQ%3D&utm_source=qr"
-               target="_blank">
-                Instagram
-            </a>
 
-        </div>
+<!-- FOOTER -->
 
-    </section>
+<footer>
 
+© 2026 Fardin Ahmed Tonmoy.
+All Rights Reserved.
 
-    <!-- FOOTER -->
-
-    <footer>
-
-        © 2026 Fardin Ahmed Tonmoy.
-        All Rights Reserved.
-
-    </footer>
-
+</footer>
 
 </body>
-
 </html>
 ```
