@@ -1,19 +1,28 @@
-```html id="f2m8qa"
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Fardin Ahmed Tonmoy | News Research & Creative Media</title>
 
-<meta name="description" content="Fardin Ahmed Tonmoy - News Research Specialist, Media Researcher, Video Editor and Visual Storyteller.">
+<meta name="description"
+content="Fardin Ahmed Tonmoy - News Research Specialist, Media Researcher, Video Editor, Visual Storyteller and Gamer.">
 
-<meta name="keywords" content="Fardin Ahmed Tonmoy, Fardin Ahmed, News Research Specialist, Media Researcher, Video Editor, Cinematic Video Editing">
+<meta name="keywords"
+content="Fardin Ahmed Tonmoy, Fardin Ahmed, News Research Specialist, Media Researcher, Video Editor, Cinematic Editing, Gamer">
 
 <meta name="author" content="Fardin Ahmed Tonmoy">
 
+
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 *{
     margin:0;
@@ -31,19 +40,26 @@ body{
     color:white;
 }
 
-/* NAVIGATION */
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
+
     padding:18px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.75);
+
+    background:rgba(0,0,0,.78);
     backdrop-filter:blur(12px);
+
     z-index:1000;
 }
 
@@ -63,19 +79,27 @@ nav ul li a{
     color:white;
     text-decoration:none;
     font-size:15px;
+    transition:.3s;
 }
 
 nav ul li a:hover{
     color:#ff1e2d;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+
     min-height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.88)),
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.88)
+    ),
     url('Background.jfif');
 
     background-size:cover;
@@ -84,27 +108,37 @@ nav ul li a:hover{
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
 
     padding:100px 20px 50px;
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
 }
 
 .profile-img{
+
     width:175px;
     height:175px;
+
     object-fit:cover;
+
     border-radius:50%;
+
     border:4px solid #ff1e2d;
-    box-shadow:0 0 35px rgba(255,30,45,.55);
+
+    box-shadow:
+    0 0 35px rgba(255,30,45,.55);
+
     margin-bottom:25px;
 }
 
 .hero h1{
+
     font-size:55px;
+
     margin-bottom:15px;
 }
 
@@ -113,31 +147,57 @@ nav ul li a:hover{
 }
 
 .tagline{
+
     font-size:21px;
+
     color:#ddd;
-    line-height:1.6;
+
+    line-height:1.7;
+
     margin-bottom:28px;
 }
 
 .hero-btn{
+
     display:inline-block;
+
     padding:13px 28px;
+
     background:#ff1e2d;
+
     color:white;
+
     text-decoration:none;
+
     border-radius:6px;
+
     font-weight:bold;
+
+    transition:.3s;
 }
 
-/* GENERAL */
+.hero-btn:hover{
+
+    background:#d90f1d;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   GENERAL
+========================= */
 
 section{
     padding:85px 8%;
 }
 
 .section-title{
+
     text-align:center;
+
     font-size:36px;
+
     margin-bottom:45px;
 }
 
@@ -145,274 +205,599 @@ section{
     color:#ff1e2d;
 }
 
-/* ABOUT */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about{
     background:#111118;
 }
 
 .about-box{
+
     max-width:900px;
+
     margin:auto;
+
     background:#1a1a24;
+
     padding:35px;
+
     border-radius:15px;
+
     border:1px solid #292936;
 }
 
 .about-box p{
+
     color:#ccc;
+
     line-height:1.9;
+
     font-size:17px;
 }
 
-/* EXPERIENCE */
+
+/* =========================
+   EXPERIENCE
+========================= */
 
 .experience-card{
+
     max-width:900px;
+
     margin:auto;
+
     background:#15151d;
+
     padding:32px;
+
     border-left:4px solid #ff1e2d;
+
     border-radius:10px;
 }
 
 .experience-card h3{
+
     color:#ff1e2d;
+
     font-size:25px;
+
     margin-bottom:8px;
 }
 
 .experience-card h4{
+
     color:#aaa;
+
     margin-bottom:18px;
 }
 
 .experience-card p{
+
     color:#ccc;
+
     line-height:1.8;
 }
 
-/* SKILLS */
+
+/* =========================
+   SKILLS
+========================= */
 
 .skills{
+
     background:#111118;
 }
 
 .skill-container{
+
     max-width:1000px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(210px,1fr));
 
     gap:18px;
 }
 
 .skill{
+
     background:#1a1a24;
+
     padding:28px 20px;
+
     text-align:center;
+
     border-radius:10px;
+
     border:1px solid #292936;
+
+    transition:.3s;
+}
+
+.skill:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#ff1e2d;
 }
 
 .skill h3{
+
     color:#ff1e2d;
+
     margin-bottom:10px;
 }
 
 .skill p{
+
     color:#bbb;
+
     line-height:1.5;
 }
 
-/* CREATIVE */
+
+/* =========================
+   CREATIVE WORK
+========================= */
 
 .creative{
+
     background:#0d0d12;
 }
 
 .creative-grid{
+
     max-width:1000px;
+
     margin:auto;
 
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
 
     gap:20px;
 }
 
 .creative-card{
+
     background:#181820;
+
     padding:30px 20px;
+
     text-align:center;
+
     border-radius:12px;
+
     border:1px solid #292936;
 }
 
 .icon{
+
     font-size:38px;
+
     margin-bottom:15px;
 }
 
 .creative-card h3{
+
     color:#ff1e2d;
+
     margin-bottom:10px;
 }
 
 .creative-card p{
+
     color:#bbb;
+
     line-height:1.6;
 }
 
-/* EDUCATION */
+
+/* =========================
+   GAMING
+========================= */
+
+.gaming{
+
+    background:#09090d;
+}
+
+.gaming-intro{
+
+    max-width:850px;
+
+    margin:0 auto 40px;
+
+    background:#15151d;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    border:1px solid #292936;
+}
+
+.gaming-intro h3{
+
+    color:#ff1e2d;
+
+    font-size:25px;
+
+    margin-bottom:12px;
+}
+
+.gaming-intro p{
+
+    color:#ccc;
+
+    line-height:1.7;
+
+    font-size:16px;
+}
+
+
+/* GAME GRID */
+
+.game-grid{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(230px,1fr));
+
+    gap:22px;
+}
+
+.game-card{
+
+    background:#15151d;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    border:1px solid #292936;
+
+    transition:.3s;
+
+    text-align:center;
+}
+
+.game-card:hover{
+
+    transform:translateY(-7px);
+
+    border-color:#ff1e2d;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4);
+}
+
+.game-card img{
+
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.game-card h3{
+
+    color:#ff1e2d;
+
+    font-size:21px;
+
+    margin:18px 10px 8px;
+}
+
+.game-card p{
+
+    color:#aaa;
+
+    margin-bottom:20px;
+}
+
+
+/* FREE FIRE UID */
+
+.freefire-uid{
+
+    max-width:600px;
+
+    margin:45px auto 0;
+
+    padding:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1b1113,
+        #15151d
+    );
+
+    border:1px solid #ff1e2d;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:
+    0 0 25px rgba(255,30,45,.15);
+}
+
+.freefire-uid h3{
+
+    color:#ff1e2d;
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+.freefire-uid p{
+
+    color:#ccc;
+
+    font-size:18px;
+}
+
+.freefire-uid strong{
+
+    color:white;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
 
 .education{
+
     background:#111118;
 }
 
 .education-card{
+
     max-width:900px;
+
     margin:auto;
+
     background:#1a1a24;
+
     padding:30px;
+
     border-radius:12px;
+
     text-align:center;
 }
 
 .education-card h3{
+
     color:#ff1e2d;
+
     margin-bottom:12px;
 }
 
 .education-card p{
+
     color:#ccc;
+
     line-height:1.7;
 }
 
-/* CONTACT */
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
+
     text-align:center;
 }
 
 .contact p{
+
     color:#ccc;
+
     margin-bottom:28px;
+
     font-size:17px;
 }
 
 .social-links{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:12px;
 }
 
 .social-links a{
+
     padding:13px 23px;
+
     background:#ff1e2d;
+
     color:white;
+
     text-decoration:none;
+
     border-radius:6px;
+
     font-weight:bold;
+
+    transition:.3s;
 }
 
 .social-links a:hover{
+
     background:#d90f1d;
+
+    transform:translateY(-2px);
 }
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
+
     text-align:center;
+
     padding:25px;
+
     background:#050507;
+
     color:#777;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px){
 
     nav{
+
         padding:15px 5%;
     }
 
     nav ul{
+
         gap:9px;
     }
 
     nav ul li a{
+
         font-size:11px;
     }
 
     .hero h1{
+
         font-size:38px;
     }
 
     .tagline{
+
         font-size:17px;
     }
 
     .profile-img{
+
         width:145px;
         height:145px;
     }
 
     section{
+
         padding:65px 5%;
     }
+
+    .game-card img{
+
+        height:200px;
+    }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-<div class="logo">FAT</div>
+<div class="logo">
+FAT
+</div>
 
 <ul>
 
-<li><a href="#about">About</a></li>
+<li>
+<a href="#about">About</a>
+</li>
 
-<li><a href="#experience">Experience</a></li>
+<li>
+<a href="#experience">Experience</a>
+</li>
 
-<li><a href="#skills">Skills</a></li>
+<li>
+<a href="#skills">Skills</a>
+</li>
 
-<li><a href="#creative">Creative</a></li>
+<li>
+<a href="#creative">Creative</a>
+</li>
 
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#gaming">Gaming</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
 
 </ul>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<img src="profile.jpg.jpeg"
+<img
+src="profile.jpg.jpeg"
 alt="Fardin Ahmed Tonmoy"
-class="profile-img">
+class="profile-img"
+>
 
 <h1>
 Fardin Ahmed <span>Tonmoy</span>
 </h1>
 
 <p class="tagline">
+
 News Research Specialist |
 Media Researcher |
 Video Editor |
-Visual Storyteller
+Visual Storyteller |
+Gamer
+
 </p>
 
 <a href="#about" class="hero-btn">
@@ -424,7 +809,9 @@ Explore My Profile
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="about" id="about">
 
@@ -444,8 +831,13 @@ I work with news and information research while also
 developing my skills in video editing, cinematic editing
 and creative content production.
 
-I enjoy discovering stories, researching information
-and transforming ideas into engaging visual content.
+Apart from my professional interests, I am also a
+passionate gamer who enjoys exploring different games,
+genres and gaming experiences.
+
+I enjoy discovering stories, researching information,
+creating visual content and experiencing the world of
+gaming.
 
 </p>
 
@@ -454,7 +846,9 @@ and transforming ideas into engaging visual content.
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
 <section id="experience">
 
@@ -464,7 +858,9 @@ Professional <span>Experience</span>
 
 <div class="experience-card">
 
-<h3>Junior Executive</h3>
+<h3>
+Junior Executive
+</h3>
 
 <h4>
 Ryans Archives Limited |
@@ -488,7 +884,9 @@ information analysis and understanding media trends.
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section class="skills" id="skills">
 
@@ -498,9 +896,12 @@ Professional <span>Skills</span>
 
 <div class="skill-container">
 
+
 <div class="skill">
 
-<h3>News Research</h3>
+<h3>
+News Research
+</h3>
 
 <p>
 Finding, researching and organizing
@@ -512,7 +913,9 @@ relevant news and information.
 
 <div class="skill">
 
-<h3>Media Research</h3>
+<h3>
+Media Research
+</h3>
 
 <p>
 Media monitoring, coverage tracking
@@ -524,7 +927,9 @@ and information analysis.
 
 <div class="skill">
 
-<h3>Video Editing</h3>
+<h3>
+Video Editing
+</h3>
 
 <p>
 Creative video editing and
@@ -536,7 +941,9 @@ storytelling through visuals.
 
 <div class="skill">
 
-<h3>Cinematic Editing</h3>
+<h3>
+Cinematic Editing
+</h3>
 
 <p>
 Cinematic style editing,
@@ -548,7 +955,9 @@ pacing and visual presentation.
 
 <div class="skill">
 
-<h3>Visual Storytelling</h3>
+<h3>
+Visual Storytelling
+</h3>
 
 <p>
 Turning ideas and stories into
@@ -560,7 +969,9 @@ engaging visual experiences.
 
 <div class="skill">
 
-<h3>Digital Media</h3>
+<h3>
+Digital Media
+</h3>
 
 <p>
 Understanding digital platforms,
@@ -569,12 +980,15 @@ trends and online media.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- CREATIVE WORK -->
+<!-- =========================
+     CREATIVE WORK
+========================= -->
 
 <section class="creative" id="creative">
 
@@ -584,11 +998,16 @@ Creative <span>Work</span>
 
 <div class="creative-grid">
 
+
 <div class="creative-card">
 
-<div class="icon">🔎</div>
+<div class="icon">
+🔎
+</div>
 
-<h3>News Research</h3>
+<h3>
+News Research
+</h3>
 
 <p>
 Researching stories, information
@@ -600,9 +1019,13 @@ and current media trends.
 
 <div class="creative-card">
 
-<div class="icon">🎬</div>
+<div class="icon">
+🎬
+</div>
 
-<h3>Video Editing</h3>
+<h3>
+Video Editing
+</h3>
 
 <p>
 Editing videos with creative
@@ -614,9 +1037,13 @@ transitions, pacing and storytelling.
 
 <div class="creative-card">
 
-<div class="icon">🎥</div>
+<div class="icon">
+🎥
+</div>
 
-<h3>Cinematic Content</h3>
+<h3>
+Cinematic Content
+</h3>
 
 <p>
 Creating visually engaging
@@ -628,9 +1055,13 @@ cinematic-style content.
 
 <div class="creative-card">
 
-<div class="icon">✨</div>
+<div class="icon">
+✨
+</div>
 
-<h3>Creative Media</h3>
+<h3>
+Creative Media
+</h3>
 
 <p>
 Exploring ideas and transforming
@@ -639,12 +1070,156 @@ them into engaging digital content.
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- EDUCATION -->
+<!-- =========================
+     GAMING PROFILE
+========================= -->
+
+<section class="gaming" id="gaming">
+
+<h2 class="section-title">
+Gaming <span>Profile</span>
+</h2>
+
+
+<div class="gaming-intro">
+
+<h3>
+🎮 Gamer & Gaming Enthusiast
+</h3>
+
+<p>
+
+Gaming is one of my favorite ways to experience
+competition, strategy, reflex and creativity.
+
+I enjoy playing different types of games and exploring
+new gaming experiences across action, battle royale,
+football and adventure genres.
+
+</p>
+
+</div>
+
+
+<div class="game-grid">
+
+
+<!-- FREE FIRE -->
+
+<div class="game-card">
+
+<img
+src="Free fire logo.jfif"
+alt="Free Fire"
+>
+
+<h3>
+Free Fire
+</h3>
+
+<p>
+Battle Royale
+</p>
+
+</div>
+
+
+<!-- CALL OF DUTY -->
+
+<div class="game-card">
+
+<img
+src="Cll Of Duty Wallpaper.jfif"
+alt="Call of Duty"
+>
+
+<h3>
+Call of Duty
+</h3>
+
+<p>
+FPS & Action
+</p>
+
+</div>
+
+
+<!-- EFOOTBALL -->
+
+<div class="game-card">
+
+<img
+src="efootball.jfif"
+alt="eFootball"
+>
+
+<h3>
+eFootball
+</h3>
+
+<p>
+Football Gaming
+</p>
+
+</div>
+
+
+<!-- ASSASSIN'S CREED -->
+
+<div class="game-card">
+
+<img
+src="Assassin's Creed Logo.jfif"
+alt="Assassin's Creed"
+>
+
+<h3>
+Assassin's Creed
+</h3>
+
+<p>
+Action & Adventure
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- FREE FIRE UID -->
+
+<div class="freefire-uid">
+
+<h3>
+🔥 Free Fire Player
+</h3>
+
+<p>
+
+Free Fire UID:
+
+<strong>
+3212499102
+</strong>
+
+</p>
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
 
 <section class="education">
 
@@ -654,7 +1229,9 @@ My <span>Education</span>
 
 <div class="education-card">
 
-<h3>Academic Journey</h3>
+<h3>
+Academic Journey
+</h3>
 
 <p>
 
@@ -669,7 +1246,9 @@ and knowledge in media and digital technology.
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contact">
 
@@ -678,36 +1257,58 @@ Let's <span>Connect</span>
 </h2>
 
 <p>
+
 Feel free to connect with me through phone,
 email or my social media profiles.
+
 </p>
+
 
 <div class="social-links">
 
+
 <a href="mailto:atonmoy611@gmail.com">
+
 📧 Email
+
 </a>
+
 
 <a href="tel:01762147744">
+
 📞 Call Me
+
 </a>
 
-<a href="https://www.facebook.com/share/1MvZS3xax3/?mibextid=wwXIfr"
-target="_blank">
+
+<a
+href="https://www.facebook.com/share/1MvZS3xax3/?mibextid=wwXIfr"
+target="_blank"
+>
+
 Facebook
+
 </a>
 
-<a href="https://www.instagram.com/itz_tonmoy_11?igsi=dTRwZDI0YmV5eGQ%3D&utm_source=qr"
-target="_blank">
+
+<a
+href="https://www.instagram.com/itz_tonmoy_11?igsi=dTRwZDI0YmV5eGQ%3D&utm_source=qr"
+target="_blank"
+>
+
 Instagram
+
 </a>
+
 
 </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -716,6 +1317,8 @@ All Rights Reserved.
 
 </footer>
 
+
 </body>
+
 </html>
 ```
